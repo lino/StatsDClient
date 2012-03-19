@@ -5,6 +5,10 @@ namespace StatsD;
 /**
  * Forked from git://gist.github.com/1065177.git gist-1065177
  * See https://gist.github.com/1065177/5f7debc212724111f9f500733c626416f9f54ee6
+ *
+ * This program is free software. It comes without any warranty to the extent permitted
+ * by applicable law. You can do whatever you want with it, Print it, fax it, do whatever
+ * you want with it, as long as you enjoy doing it.
  */
 class StatsD {
 
