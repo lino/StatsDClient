@@ -28,7 +28,7 @@ class StatsD {
      * @param float|1 $sampleRate the rate (0-1) for sampling.
      **/
     public function timing($stat, $time, $sampleRate=1) {
-        send(array($stat => "$time|ms"), $sampleRate);
+        $this->send(array($stat => "$time|ms"), $sampleRate);
     }
 
     /**
@@ -39,7 +39,7 @@ class StatsD {
      * @return boolean
      **/
     public function increment($stats, $sampleRate=1) {
-        updateStats($stats, 1, $sampleRate);
+        $this->updateStats($stats, 1, $sampleRate);
     }
 
     /**
@@ -50,7 +50,7 @@ class StatsD {
      * @return boolean
      **/
     public function decrement($stats, $sampleRate=1) {
-        updateStats($stats, -1, $sampleRate);
+        $this->updateStats($stats, -1, $sampleRate);
     }
 
     /**
@@ -68,7 +68,7 @@ class StatsD {
             $data[$stat] = "$delta|c";
         }
 
-        send($data, $sampleRate);
+        $this->send($data, $sampleRate);
     }
 
     /*
