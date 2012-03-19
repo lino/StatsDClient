@@ -98,6 +98,5 @@ class StatsD {
             fwrite($fp, "$stat:$value");
         }
         fclose($fp);
-        echo $errno . "\t" . $errstr;
     }
 }
