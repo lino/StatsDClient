@@ -32,6 +32,17 @@ class StatsD {
     }
 
     /**
+     * Log Gauges, arbitrary values, which can be recorded.
+     *
+     * @param string $stats The metric to in log gauge info for.
+     * @param double $time The arbitrary value to log
+     * @param float|1 $sampleRate the rate (0-1) for sampling.
+     **/
+    public function gauges($stat, $gauge, $sampleRate=1) {
+        $this->send(array($stat => "$gauge|g"), $sampleRate);
+    }
+
+    /**
      * Increments one or more stats counters
      *
      * @param string|array $stats The metric(s) to increment.
