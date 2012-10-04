@@ -1,0 +1,14 @@
+{
+    "name": "DigitalPioneers/StatsD-Client",
+    "type": "symfony-bundle",
+    "description": "Small PHP client which pushes data over UDP to a stats.d server",
+    "keywords": ["statsd", "statistics"],
+    "homepage": "http://www.digitalpioneers.de",
+    "require": {
+        "php": ">=5.3.1"
+    },
+    "autoload": {
+        "psr-0": {"StatsD": ""}
+    },
+    "minimum-stability": "dev"
+}
