@@ -1,4 +1,4 @@
-StatsD Lib
+StatsD Client
 ==========
 
 Small PHP client which pushes data over UDP to a stats.d server.
@@ -102,4 +102,4 @@ $statsd = $this->get('statsd');
 $statsd->increment('mypage.visits');
 ```
 
-For further informations on the functions offered take a look in the [StatsD.php](https://github.com/lino-dp/StatsDClient/blob/master/src/StatsD/StatsD.php).
+For further informations on the functions offered take a look at the [StatsD.php](https://github.com/lino-dp/StatsDClient/blob/master/src/StatsD/StatsD.php).

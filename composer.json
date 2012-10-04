@@ -5,7 +5,7 @@
     "keywords": ["statsd", "statistics"],
     "homepage": "http://www.digitalpioneers.de",
     "require": {
-        "php": ">=5.3.1",
+        "php": ">=5.3.1"
     },
     "autoload": {
         "psr-0": {"StatsD": ""}
