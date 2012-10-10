@@ -3,12 +3,23 @@
 namespace StatsD;
 
 /**
- * Forked from git://gist.github.com/1065177.git gist-1065177
- * See https://gist.github.com/1065177/5f7debc212724111f9f500733c626416f9f54ee6
+ * Forked from:
+ *     git://gist.github.com/1065177.git gist-1065177
+ * See:
+ *     https://gist.github.com/1065177/5f7debc212724111f9f500733c626416f9f54ee6
  *
- * This program is free software. It comes without any warranty to the extent permitted
- * by applicable law. You can do whatever you want with it, Print it, fax it, do whatever
- * you want with it, as long as you enjoy doing it.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 class StatsD {
 
