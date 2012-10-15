@@ -34,9 +34,9 @@ class StatsD {
     /**
      * Log timing information
      *
-     * @param string $stats The metric to in log timing info for.
-     * @param float $time The elapsed time (ms) to log
-     * @param float|1 $sampleRate the rate (0-1) for sampling.
+     * @param $stat $stats The metric to in log timing info for.
+     * @param $time $time The elapsed time (ms) to log
+     * @param $sampleRate|1 $sampleRate the rate (0-1) for sampling.
      **/
     public function timing($stat, $time, $sampleRate=1) {
         $this->send(array($stat => "$time|ms"), $sampleRate);
@@ -113,12 +113,15 @@ class StatsD {
 
         if (empty($sampledData)) { return; }
 
-        // Wrap this in a try/catch - failures in any of this should be silently ignored
-        $fp = fsockopen("udp://" . $this->host, $this->port, $errno, $errstr);
-        if (! $fp) { return; }
-        foreach ($sampledData as $stat => $value) {
-            fwrite($fp, "$stat:$value");
+        try{
+            $fp = fsockopen("udp://" . $this->host, $this->port, $errno, $errstr);
+            if (! $fp) { return; }
+            foreach ($sampledData as $stat => $value) {
+                fwrite($fp, "$stat:$value");
+            }
+            fclose($fp);
+        }catch(Exception $e){
+            // do nothing
         }
-        fclose($fp);
     }
 }
